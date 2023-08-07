@@ -1,12 +1,6 @@
 class my_itemBD extends my_item;
   `uvm_object_utils(my_itemBD)
-  rand logic reset;
-  rand logic enable;
-  rand logic d;
-  logic q;
-  rand int delay;
-  
-  constraint c_reset {reset dist {1:=1, 0:=5};}  
+
   constraint c_delay {delay > 3; delay <6;}
   
   function new(string name="");
